@@ -1,0 +1,72 @@
+html, body, ul, li, p, h1, h2, h3 {
+	margin: 0;
+	padding: 0;
+}
+h1, h2, h3 {
+	font-weight: normal;
+}
+ul, li {
+	list-style: none;
+}
+body {
+	font-family: '微软雅黑';
+	background-color: #ddd;
+	color: #666;
+	font-size: 12px;
+}
+.json-index {
+	.header {
+		background-color: #323f7a;
+		height: 200px;
+		color: #fff;
+		text-align: center;
+	}
+	.content {
+		width: 100%;
+		max-width: 960px;
+		margin: 0 auto;
+	}
+}
+
+.title {
+	font-size: 54px;
+	padding-top: 50px;
+}
+.sub-title {
+	font-size: 18px;
+}
+
+.step-title {
+	border-bottom: #bbb solid 1px;
+	line-height: 300%;
+	font-size: 24px;
+}
+.step-content {
+	padding: 20px 0;
+}
+
+.attr-add {
+	display: inline-block;
+	font-size: 14px;
+
+	.j_input {
+		height: 30px;
+		padding: 0 5px;
+		width: 200px;
+	}
+	.item {
+		display: inline-block;
+		padding-right: 20px;
+	}
+}
+.button {
+	height: 34px;
+	width: 80px;
+	cursor: pointer;
+	border: none;
+	border-radius: 4px;
+}
+.button-positive {
+	background-color: #387ef5;
+	color: #fff;
+}

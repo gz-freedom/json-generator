@@ -1,0 +1,25 @@
+{
+  "name": "json-generator",
+  "version": "0.0.0",
+  "authors": [
+    "gz-freedom <myec2005@163.com>"
+  ],
+  "description": "A Json Online Generator",
+  "main": "index.html",
+  "moduleType": [
+    "amd",
+    "node"
+  ],
+  "keywords": [
+    "json",
+    "generator"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
