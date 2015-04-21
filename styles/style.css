@@ -1,5 +1,5 @@
 @charset "UTF-8";
-html, body, ul, li, p, h1, h2, h3 {
+html, body, ul, li, p, h1, h2, h3, form {
   margin: 0;
   padding: 0; }
 
@@ -22,8 +22,9 @@ body {
   text-align: center; }
 .json-index .content {
   width: 100%;
-  max-width: 960px;
-  margin: 0 auto; }
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 20px; }
 
 .title {
   font-size: 54px;
@@ -37,19 +38,49 @@ body {
   line-height: 300%;
   font-size: 24px; }
 
-.step-content {
-  padding: 20px 0; }
+.step-content .item {
+  padding-right: 20px;
+  margin-bottom: 10px; }
+.step-content .attr-name {
+  width: 80px;
+  text-align: right;
+  display: inline-block;
+  padding-right: 5px; }
 
 .attr-add {
   display: inline-block;
   font-size: 14px; }
-  .attr-add .j_input {
-    height: 30px;
-    padding: 0 5px;
-    width: 200px; }
   .attr-add .item {
-    display: inline-block;
-    padding-right: 20px; }
+    display: inline-block; }
+
+.attr-data {
+  padding-top: 20px;
+  overflow: hidden; }
+  .attr-data .item {
+    float: left;
+    width: 40%;
+    position: relative; }
+  .attr-data .item:hover .icon-delete {
+    display: block; }
+  .attr-data .icon-delete {
+    display: none;
+    position: absolute;
+    font-size: 16px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #999;
+    color: #fff;
+    text-align: center;
+    line-height: 20px;
+    top: 7px;
+    right: 5px; }
+
+.j_input {
+  height: 30px;
+  padding: 0 5px;
+  width: 200px; }
 
 .button {
   height: 34px;
@@ -59,5 +90,7 @@ body {
   border-radius: 4px; }
 
 .button-positive {
-  background-color: #387ef5;
-  color: #fff; }
+  background-color: #323f7a;
+  color: #fff;
+  margin-top: 20px;
+  clear: both; }

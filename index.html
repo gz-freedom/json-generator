@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app='JsonAPP'>
 <head>
 	<meta charset="UTF-8">
 	<title>Json Generator</title>
@@ -14,23 +14,25 @@
 	<div class="content">
 		<h3 class="step-title">第1步：设置属性</h2>
 		<div class="step-content">
-			<form>
-				<ul class="attr-add">
-					<li class="item"><label for="">属性名：<input type="text" class="j_input"></label></li>
-					<li class="item"><label for="">默认值：<input type="text" class="j_input" placeholder="没有默认值则留空"></label><span></li>
-				</ul>
-				<button class="button button-positive">添加</button>
-			</form>
+			<ul class="attr-add">
+				<li class="item"><label for="">属性名：<input type="text" class="j_input" ng-model="attr_name"></label></li>
+				<li class="item">值类型：<span><label><input type="radio" name="attrType">对象</label> <label><input type="radio" name="attrType">数组</label> <label><input type="radio" name="attrType">布尔值</label> <label><input type="radio" name="attrType">数字</label> <label><input type="radio" name="attrType">字符串</label></span></li>
+			</ul>
+			<button class="button button-positive" ng-click="addAttr()">添加</button>
 		</div>
-		<h3 class="step-title">第2步：开始添加</h2>
-		<div class="step-content">
-			<ul>
-				<li class="item">
-					
+		<h3 class="step-title" ng-show="attrs.length">第2步：开始添加</h2>
+		<div class="step-content" ng-show="attrs.length">
+			<ul class="attr-data">
+				<li class="item" ng-repeat="attr in attrs">
+					<span ng-bind="attr.name" data-attrname="{{attr.name}}" class="attr-name"></span>
+					<input type="text" value="{{attr.value}}" ng-model="attr.value" class="j_input">
+					<span class="icon-delete" ng-click="deleteAttr()">x</span>
 				</li>
 			</ul>
+			<button class="button button-positive" ng-click="addData()">添加数据</button>
 		</div>
 	</div>
 	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="scripts/script.js"></script>
 </body>
 </html>
